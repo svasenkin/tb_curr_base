@@ -88,20 +88,20 @@ def DeleteByDate(cdate):
     conn.commit()
     print("Total number of rows deleted :", conn.total_changes)
     
-"""USD 	57.6 	59.0
-EUR 	67.3 	68.7
-GBP 	75.6 	77.6
+"""USD 	58.25 	60.25
+EUR 	67.75 	69.75
+GBP 	77.0 	79.0
 """
 
 #DeleteByDate("27.10.2017")
 #print(GetDataOnDate("25.10.2017"))
 
-DS = 57.6
-DB = 59
-ES = 67.3
-EB = 68.7
-PS = 75.6
-PB = 77.6
+DS = 58.25
+DB = 60.25
+ES = 67.75
+EB = 69.75
+PS = 77
+PB = 79
     
 AppendDataForToday([("USD",DS,DB),("EUR",ES,EB),("GBP",PS,PB)])    
 
