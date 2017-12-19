@@ -61,7 +61,7 @@ def GetDataOnDate(cdate):
 def PlotData(dataset):
     #count = len(data)
     plt.figure(figsize=(15,9))
-    plt.axis((0,30,55,80))
+    plt.axis((0,30,55,83))
     USD = [x[3] for x in dataset if x[1] == "USD"]
     EUR = [x[3] for x in dataset if x[1] == "EUR"]
     GBP = [x[3] for x in dataset if x[1] == "GBP"]
@@ -88,20 +88,20 @@ def DeleteByDate(cdate):
     conn.commit()
     print("Total number of rows deleted :", conn.total_changes)
     
-"""USD 	58.25 	60.25
-EUR 	67.75 	69.75
-GBP 	77.0 	79.0
+"""USD 	57.5 	59.5
+EUR 	68.0 	70.0
+GBP 	77.25 	79.25
 """
 
-#DeleteByDate("27.10.2017")
+#DeleteByDate("17.11.2017")
 #print(GetDataOnDate("25.10.2017"))
 
-DS = 58.25
-DB = 60.25
-ES = 67.75
-EB = 69.75
-PS = 77
-PB = 79
+DS = 57.5
+DB = 59.5
+ES = 68.0
+EB = 70.0
+PS = 77.25
+PB = 79.25
     
 AppendDataForToday([("USD",DS,DB),("EUR",ES,EB),("GBP",PS,PB)])    
 
